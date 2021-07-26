@@ -51,3 +51,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function on_hit(sprit
     othersprite.destroy(effects.fire, 100)
     info.changeScoreBy(1)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_crash(sprite: Sprite, othersprite: Sprite) {
+    othersprite.destroy()
+    info.changeLifeBy(-1)
+})

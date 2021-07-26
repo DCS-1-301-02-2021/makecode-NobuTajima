@@ -59,4 +59,4 @@ def on_crash(sprite, othersprite):
     othersprite.destroy()
     info.change_life_by(-1)
 sprites.on_overlap(SpriteKind.player,SpriteKind.enemy,
-    on_hit)
+    on_crash)
